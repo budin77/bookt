@@ -1,0 +1,6 @@
+mixin listItem(icon, text)
+  li.list-group-item
+    svg.card__icon
+      use(xlink:href=`/img/icons.svg#icon-${icon}`)
+    |   
+    span= text

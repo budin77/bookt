@@ -1,0 +1,27 @@
+extends base
+
+include _components
+
+block content
+  .container
+    .row
+      each tour in tours
+        .col-lg-4.col-md-6
+          .card.panel
+            a(href=`/tour/${tour.slug}`)    
+              img.card-img-top(src=`img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+            .card-body
+              a(href=`/tour/${tour.slug}`)
+                h5.card-title= tour.name
+              p.card-text #{tour.summary}
+            ul.list-group.list-group-flush
+              +listItem('map-pin',tour.startLocation.description)
+              +listItem('check-circle',`${tour.difficulty} ${tour.duration}-days tour`)
+              - const startDate = `${tour.startDates[0].toLocaleString('en-us', {month:'long', year:'numeric'})}` 
+              +listItem('calendar',startDate)
+              +listItem('flag',`${tour.locations.length} stops`)
+              li.list-group-item
+                .float-left.text-primary= `$${tour.price} per person`
+                .float-right.text-primary= `${tour.ratingsAverage}/${tour.ratingsQuantity} reviews`
+              card-body.text-center
+                a.btn.btn-primary.btn-block(href=`/tour/${tour.slug}`) Details

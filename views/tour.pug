@@ -1,0 +1,46 @@
+extends base
+include _components
+
+block append head
+  script(src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet')
+
+block content
+  nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="/") Home
+      li.breadcrumb-item.active(aria-current="page")= `${tour.name}` 
+  .tour-cover-img(style=`background-image:url(/img/tours/${tour.imageCover})`)
+  .container
+    .row      
+      .col
+        .card.panel
+          .card-body  
+            h5.card-title= tour.name
+            - const paragraphs = tour.description.split('\n');
+            each paragraph in paragraphs 
+              p.card-text #{paragraph}
+          ul.list-group.list-group-flush
+            +listItem('map-pin',tour.startLocation.description)
+            +listItem('check-circle',`${tour.difficulty} ${tour.duration}-days tour`)
+            - const startDate = `${tour.startDates[0].toLocaleString('en-us', {month:'long', year:'numeric'})}` 
+            +listItem('calendar',startDate)
+            +listItem('flag',`${tour.locations.length} stops`)
+            li.list-group-item
+              .float-left.text-primary= `$${tour.price} per person`
+              .float-right.text-primary= `${tour.ratingsAverage}/${tour.ratingsQuantity} reviews`
+            card-body.text-center
+              a.btn.btn-primary.btn-block(href='javascript:alert("Book It...");') Book it
+    .row
+      .col
+        #map(data-locations=`${JSON.stringify(tour.locations)}` style='width:100%;height:400px;margin-bottom:20px')
+    //-  GUIDES          
+    //- .row
+    //-   each guide in tour.guides
+    //-     .col-lg-4.col-md-6
+    //-       .card.panel    
+    //-         img.card-img-top(src=`/img/users/${guide.photo}`, alt=`${guide.name}`)
+    //-         .card-body    
+    //-           h5.card-title= guide.name
+  

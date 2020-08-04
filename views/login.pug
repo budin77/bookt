@@ -1,0 +1,18 @@
+extends base
+
+block append head
+
+block content
+  nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="/") Home
+      li.breadcrumb-item.active(aria-current="page") Login 
+  .container.h-100.p-3.msg
+    .row.h-100.justify-content-center.align-items-center
+      form.col-md-6#loginform
+        .form-group
+          input.form-control(type="email" id="inputEmail" placeholder="Email address" required autofocus)
+        .form-group
+          input.form-control(type="password" id="inputPassword" placeholder="Password" required)
+        button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in 

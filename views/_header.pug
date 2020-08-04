@@ -1,0 +1,13 @@
+header
+  nav.navbar.navbar-dark.bg-dark
+    a.navbar-brand(href='/')   
+      span BookT
+    if user
+      span.navbar-text
+        //- span= `${user.name.split(' ')[1]} `
+        a.btn.btn-outline-success.my-2.my-sm-0#accountButton(href="/account" role="button") My Account
+        span &nbsp;
+        a.btn.btn-outline-success.my-2.my-sm-0#logoutButton(href="/logout" role="button") Logout
+    else  
+      span.navbar-text
+        a.btn.btn-outline-success.my-2.my-sm-0(href="/login" role="button") Login           
