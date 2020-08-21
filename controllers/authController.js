@@ -34,11 +34,15 @@ const createSendToken = (user, statusCode, req, res) => {
 
   res.cookie('jwt', token, cookieOptions);
 
+  const newUser = user.toObject();
+  delete newUser.password;
+  delete newUser.__v;
+
   res.status(statusCode).json({
     status: 'success',
     token,
     data: {
-      user
+      user: newUser
     }
   });
 };
