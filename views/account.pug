@@ -5,7 +5,6 @@ block content
       li.breadcrumb-item
         a(href="/") Home
       li.breadcrumb-item.active(aria-current="page") My Account 
-  .container-fluid
-    .row
-      .col-12.m-5
-        h1.h2= `Dashboard ${user.name}` 
+  .alert.alert-success.m-5
+    h4.alert-heading= `Dashboard ${user.name}`
+    hr
