@@ -26,6 +26,7 @@ const createSendToken = (user, statusCode, req, res) => {
   if (process.env.NODE_ENV === 'production') {
     //HTTPS only
     cookieOptions.secure = true;
+    cookieOptions.samesite = 'None';
   }
 
   // if (req.secure || req.headers('x-forwarded-proto') === 'https') {
