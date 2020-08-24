@@ -21,7 +21,7 @@ const createSendToken = (user, statusCode, req, res) => {
     ),
     //only read and send
     httpOnly: true,
-    samesite: 'None'
+    sameSite: 'none'
   };
 
   if (process.env.NODE_ENV === 'production') {
