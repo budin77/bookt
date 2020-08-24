@@ -26,14 +26,14 @@ const createSendToken = (user, statusCode, req, res) => {
   if (process.env.NODE_ENV === 'production') {
     //HTTPS only
     cookieOptions.secure = true;
-    cookieOptions.sameSite = 'none';
+    cookieOptions.SameSite = 'none';
   }
 
   // if (req.secure || req.headers('x-forwarded-proto') === 'https') {
   //   cookieOptions.secure = true;
   // }
 
-  //res.cookie('jwt', token, cookieOptions);
+  res.cookie('jwt', token, cookieOptions);
 
   const newUser = user.toObject();
   delete newUser.password;
