@@ -33,7 +33,7 @@ const createSendToken = (user, statusCode, req, res) => {
   //   cookieOptions.secure = true;
   // }
 
-  res.cookie('jwt', token, cookieOptions);
+  //res.cookie('jwt', token, cookieOptions);
 
   const newUser = user.toObject();
   delete newUser.password;
