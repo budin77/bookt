@@ -11,7 +11,7 @@ Web App:
 This project is made to demonstrate several development tools,patterns and techniques:
 
 - Monolithic MVC architecture based on Express Node.js framework
-- RESTfull API - Stateless API
+- Representational state transfer(REST) architectural style - URLs based Reources, HTTP verbs ,Stateless
 - Authentication (JSON Web Token), Authorization & Security
 - Global Error Handling Middleware
 - Mongoose - Object Data Modelling(ODM) library for MonngoDB and Node.js
