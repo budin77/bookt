@@ -2,7 +2,7 @@
 
 RESTful API - node.js Express/Mongoose & Server Side Rendering - Pug
 
-This project is made to demonstrate several development tools,patterns and techniques:
+This project is made to demonstrate several development tools, patterns and techniques:
 
 - REST architectural style principles: URLs based Resources, HTTP verbs & Stateless
 - Monolithic MVC architecture
