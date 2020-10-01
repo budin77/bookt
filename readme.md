@@ -8,7 +8,7 @@ API documentation:
 Web App:
 [https://booktbb.herokuapp.com](https://booktbb.herokuapp.com)
 
-This project is made to demonstrate several development tools, patterns and techniques:
+This project is made to demonstrate several development patterns and techniques:
 
 - Monolithic MVC architecture based on Express Node.js framework
 - RESTfull API - Stateless API
