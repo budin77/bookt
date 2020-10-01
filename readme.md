@@ -11,7 +11,7 @@ Web App:
 This project is made to demonstrate several development tools,patterns and techniques:
 
 - REST architectural style principles: URLs based Resources, HTTP verbs & Stateless
-- Monolithic MVC architecture based on Express Node.js framework
+- Monolithic MVC architecture
 - Authentication (JSON Web Token), Authorization & Security
 - Global Error Handling Middleware
 - Mongoose - Object Data Modelling(ODM) library for MonngoDB and Node.js
