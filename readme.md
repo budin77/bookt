@@ -7,3 +7,6 @@ API documentation:
 
 Web App:
 [https://booktbb.herokuapp.com](https://booktbb.herokuapp.com)
+
+- Monolithic MVC architecture
+- Authentication & Authorization
