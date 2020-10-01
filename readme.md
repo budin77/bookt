@@ -8,5 +8,9 @@ API documentation:
 Web App:
 [https://booktbb.herokuapp.com](https://booktbb.herokuapp.com)
 
-- Monolithic MVC architecture
-- Authentication & Authorization
+This project is made to demonstrate several development tools, patterns and techniques:
+
+- Monolithic MVC architecture based on Express Node.js framework
+- RESTfull API, Stateless API, Authentication & Authorization
+- Server Side Redering using the Pug template engine & Bootstrap CSS framework
+
