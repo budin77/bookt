@@ -12,7 +12,7 @@ This project is made to demonstrate several development tools,patterns and techn
 
 - Monolithic MVC architecture based on Express Node.js framework
 - RESTfull API - Stateless API
-- Authentication (JSON Web Token, Authorization & Security
+- Authentication (JSON Web Token), Authorization & Security
 - Global Error Handling Middleware
 - Mongoose - Object Data Modelling(ODM) library for MonngoDB and Node.js
 - Server Side Redering using the Pug template engine & Bootstrap CSS framework
